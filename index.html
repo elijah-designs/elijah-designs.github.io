@@ -1,21 +1,43 @@
-<div class="scrolling-images">
-  <img src="image1.jpg" alt="Image 1">
-  <img src="image2.jpg" alt="Image 2">
-  <img src="image3.jpg" alt="Image 3">
-  <img src="image4.jpg" alt="Image 4">
-  <img src="image5.jpg" alt="Image 5">
+<div class="intro">
+  <h1>Elijah Orion Hansen-Lints</h1>
+  <p>Artist/Designer</p>
 </div>
 
 <style>
-.scrolling-images {
-  white-space: nowrap;
-  overflow-x: scroll;
+.intro {
+  position: relative;
 }
 
-.scrolling-images img {
-  display: inline-block;
-  width: 200px;
-  height: 200px;
-  margin: 0 10px;
+.intro h1 {
+  font-family: 'Helvetica', sans-serif;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.intro p {
+  font-family: 'Helvetica', sans-serif;
+  color: white;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.intro:before {
+  content: "";
+  background: url(your-gif-url-here.gif) no-repeat center center;
+  background-size: cover;
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
 }
 </style>
