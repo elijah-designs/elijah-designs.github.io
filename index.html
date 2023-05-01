@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/elijah-designs/elijah-designs.github.io@main/Landing.css">    </head>
     <body>
         <h1>Echos of the Chthulucene</h1>
+        <audio id="background-audio" src="https://cdn.jsdelivr.net/gh/elijah-designs/elijah-designs.github.io/content/heilir-sir-norse-viking-background-music-114582.mp3" autoplay loop controls></audio>
         <div class="intro">
             <div class="gif-container">
                 <div class="gif" data-src="https://cdn.jsdelivr.net/gh/elijah-designs/elijah-designs.github.io@main/content/00010.png"></div>
@@ -109,15 +110,14 @@
             </div>
             <h1>Animations</h1>
             <video id="video-player" width="640" height="360" controls>
-                <source src="https://cdn.jsdelivr.net/gh/elijah-designs/elijah-designs.github.io@main/content/20230430113808.mp4" type="video/mp4">
+                <source src="https://cdn.jsdelivr.net/gh/elijah-designs/elijah-designs.github.io@main/content/Mountains.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
             <video id="video-player" width="640" height="360" controls>
-                <source src="https://cdn.jsdelivr.net/gh/elijah-designs/elijah-designs.github.io@main/content/20230430113808.mp4" type="video/mp4">
+                <source src="https://cdn.jsdelivr.net/gh/elijah-designs/elijah-designs.github.io@main/content/Rivers.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
         </div>
-        <audio id="background-audio" src="https://cdn.jsdelivr.net/gh/elijah-designs/elijah-designs.github.io@main/content/heilir-sir-norse-viking-background-music-114582.mp3" autoplay loop></audio>
         <script>
             document.addEventListener('DOMContentLoaded', function () {
                 const videoPlayer = document.getElementById('video-player');
@@ -136,7 +136,8 @@
                     // This event will be triggered periodically as the browser loads the video data
                     console.log('Video is loading data');
                 });
-            });            document.addEventListener('DOMContentLoaded', function() {
+            });            
+            document.addEventListener('DOMContentLoaded', function() {
                 const audio = document.getElementById('background-audio');
                 audio.volume = 0.5;
             });
