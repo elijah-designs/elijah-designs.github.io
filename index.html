@@ -2,26 +2,47 @@
 <html>
     <head>
         <title></title>
-        <link rel="stylesheet" href="https:\\elijah-designs.github.io/Landing.css">
+        <link rel="stylesheet" href="Landing2.css">
     </head>
     <body>
-        <h1>Elijah Orion Hansen-Lints</h1>
-        <div class = "intro">
-            <div class="gif"></div>
+        <h1>Echos of the Chthulucene</h1>
+        <div class="intro">
+            <div class="gif-container">
+                <div class="gif" data-src="https://github.com/elijah-designs/elijah-designs.github.io/blob/main/content/Rivers.gif"></div>
+            </div>
             <div class="text-box">
-                <h3>My Personal Manifesto </h3>
-                <h5>(Edited with the assistance of open.ai's ChatGPT)</h5>
-                <p> I am a creative and adventurous person, driven by a passion for hands-on activities and the desire to explore new worlds. From photography and rock climbing to training dogs and crafting, I am constantly seeking new challenges and ways to learn and grow.
-                    
-                    I value diversity and individuality, and believe that everyone has something unique and valuable to contribute to the world. I strive to be open-minded and accepting of others, and to constantly seek out new perspectives and experiences.
-                    
-                    In my pursuit of excellence, I will not be limited by traditional ways of thinking or be defined by the expectations of others. I will embrace my creativity and follow my passions, regardless of whether they are considered "objectively driven" or "scientific."
-                    
-                    I am a lifelong learner and will continue to seek out new experiences and knowledge, always striving to be the best version of myself. I am excited for the journey ahead and the opportunities it will bring.</p>
-    
-              <!--<a href="https://www.google.com"><h5>My Portfolio</h5></a>
-                --> 
+                <h5>'First Ascents'</h5>
+                <p>Many modern mountaineers have taken to claiming first ascents of the worlds great peaks.
+                    But what if people have been going to these places long before westerners called themselves 'first ascensionists?'
+                </p>
+            </div>
+            <div class="gif-container">
+                <div class="gif" data-src="https://github.com/elijah-designs/elijah-designs.github.io/blob/main/content/Rivers.gif"></div>
+            </div>
+            <div class="text-box">
+                <h5>'River Running'</h5>
+                <p>Many modern mountaineers have taken to claiming first ascents of the worlds great peaks.
+                    But what if people have been going to these places long before westerners called themselves 'first ascensionists?'
+                </p>
+            </div>
+            </div>
         </div>
-        
+
+
+        <audio id="background-audio" src="sample.mp3" autoplay loop></audio>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const audio = document.getElementById('background-audio');
+                audio.volume = 0.3;
+            });
+            document.addEventListener('DOMContentLoaded', function () {
+                const gifs = document.querySelectorAll('.gif');
+
+                gifs.forEach((gif) => {
+                const imageUrl = gif.getAttribute('data-src');
+                gif.style.backgroundImage = `url('${imageUrl}')`;
+                });
+            });
+        </script>
     </body>
 </html>
