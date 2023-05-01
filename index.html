@@ -1,5 +1,8 @@
 <!doctype html>
+<html lang="en"></html>
 <html>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <head>
         <title></title>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/elijah-designs/elijah-designs.github.io@main/Landing.css">    </head>
@@ -19,8 +22,7 @@
                 </p>
             </div>
             <div class="gif-container">
-                <div class="gif" data-src="https://cdn.jsdelivr.net/gh/elijah-designs/elijah-designs.github.io@main/content/20230430113808_000000189.png
-                "></div>
+                <div class="gif" data-src="https://cdn.jsdelivr.net/gh/elijah-designs/elijah-designs.github.io@main/content/20230430113808_000000189.png"></div>
             </div>
             <div class="text-box">
                 <h5>Descent</h5>
@@ -28,9 +30,6 @@
                     Kai was ill-prepared for the extreme cold and harsh conditions. 
                     Despite the overwhelming feeling of dread, Kai knew that he had no choice but to descend the treacherous slopes.
                 </p>
-            </div>
-            <div class="gif-container">
-                <div class="gif" data-src="https://cdn.jsdelivr.net/gh/elijah-designs/elijah-designs.github.io@main/content/20230430113808_000000189.png"></div>
             </div>
             <div class="text-box">
                 <p> As he made his way down, Kai encountered haunting remnants of a bygone era. Frozen mountaineers lay as if trapped in time, 
@@ -47,6 +46,9 @@
             <div class="gif-container">
                 <div class="gif" data-src="https://cdn.jsdelivr.net/gh/elijah-designs/elijah-designs.github.io@main/content/00099-169725488.png"></div>
             </div>
+            <div class="gif-container">
+                <div class="gif" data-src="https://cdn.jsdelivr.net/gh/elijah-designs/elijah-designs.github.io@main/content/00109-1227314263.png"></div>
+            </div>
             <div class="text-box">
                 <p> Just when Kai had almost lost hope, a snow leopard emerged from the ridge below. 
                     Fear gripped him, but he couldn't help but admire the creature's beauty and grace. 
@@ -61,7 +63,7 @@
                 </p>
             </div>
             <div class="gif-container">
-                <div class="gif" data-src="https://cdn.jsdelivr.net/gh/elijah-designs/elijah-designs.github.io@main/content/00109-1227314263.png"></div>
+                <div class="gif" data-src="https://cdn.jsdelivr.net/gh/elijah-designs/elijah-designs.github.io@main/content/00037-2516049367.png"></div>
             </div>
             <div class="text-box">
                 <h5>Rescue</h5>
@@ -73,9 +75,6 @@
                     their lives, their struggles, and their dreams, and Kai felt a deep connection to these 
                     people who seemed so immersed in their humble lives.
                 </p>
-            </div>
-            <div class="gif-container">
-                <div class="gif" data-src="https://cdn.jsdelivr.net/gh/elijah-designs/elijah-designs.github.io@main/content/00037-2516049367.png"></div>
             </div>
             <div class="text-box">
                 <p> The village shaman, sensing Kai's transience, bestowed him with incantations 
@@ -90,7 +89,7 @@
                 </p>
             </div>
             <div class="gif-container">
-                <div class="gif" data-src="https://cdn.jsdelivr.net/gh/elijah-designs/elijah-designs.github.io@main/content/20230430113808_000000189.png"></div>
+                <div class="gif" data-src="https://cdn.jsdelivr.net/gh/elijah-designs/elijah-designs.github.io@main/content/00009.png"></div>
             </div>
             <div class="text-box">
                 <h5>Departure</h5>
@@ -101,9 +100,6 @@
                     of forging connections in a world that could often seem cold and unforgiving
                 </p>
             </div>
-            <div class="gif-container">
-                <div class="gif" data-src="https://cdn.jsdelivr.net/gh/elijah-designs/elijah-designs.github.io@main/content/00009.png"></div>
-            </div>
             <div class="text-box">
                 <p> In the end, Kai's journey would not only span continents and millennia but also explore the 
                     depths of the human spirit, revealing that even in the face of insurmountable odds, there is 
@@ -111,27 +107,36 @@
                     and ultimately triumph.
                 </p>
             </div>
-            <div class="gif-container">
-                <div class="gif" data-src="https://cdn.jsdelivr.net/gh/elijah-designs/elijah-designs.github.io@main/content/20230430113808_000000189.png"></div>
-            </div>
-            <video width="640" height="480" controls>
-                <source src="https://cdn.jsdelivr.net/gh/elijah-designs/elijah-designs.github.io@main/content/20230430003948.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>            
-            <video width="640" height="480" controls>
+            <h1>Animations</h1>
+            <video id="video-player" width="640" height="360" controls>
                 <source src="https://cdn.jsdelivr.net/gh/elijah-designs/elijah-designs.github.io@main/content/20230430113808.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
-            <video width="640" height="480" controls>
-                <source src="https://cdn.jsdelivr.net/gh/elijah-designs/elijah-designs.github.io@main/content/20230430150459.mp4" type="video/mp4">
+            <video id="video-player" width="640" height="360" controls>
+                <source src="https://cdn.jsdelivr.net/gh/elijah-designs/elijah-designs.github.io@main/content/20230430113808.mp4" type="video/mp4">
                 Your browser does not support the video tag.
-            </video>                
+            </video>
         </div>
-
-
         <audio id="background-audio" src="https://cdn.jsdelivr.net/gh/elijah-designs/elijah-designs.github.io@main/content/heilir-sir-norse-viking-background-music-114582.mp3" autoplay loop></audio>
         <script>
-            document.addEventListener('DOMContentLoaded', function() {
+            document.addEventListener('DOMContentLoaded', function () {
+                const videoPlayer = document.getElementById('video-player');
+                
+                videoPlayer.addEventListener('canplay', function () {
+                    // This event will be triggered when the browser can start playing the video
+                    console.log('Video can be played');
+                });
+                
+                videoPlayer.addEventListener('waiting', function () {
+                    // This event will be triggered when the video is waiting for more data to load
+                    console.log('Video is waiting for more data');
+                });
+                
+                videoPlayer.addEventListener('progress', function () {
+                    // This event will be triggered periodically as the browser loads the video data
+                    console.log('Video is loading data');
+                });
+            });            document.addEventListener('DOMContentLoaded', function() {
                 const audio = document.getElementById('background-audio');
                 audio.volume = 0.5;
             });
