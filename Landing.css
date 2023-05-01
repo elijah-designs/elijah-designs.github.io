@@ -1,6 +1,6 @@
 .intro {
   position: relative;
-  width: 100vw auto;
+  width: 100vw;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -88,6 +88,10 @@ a:visited {
   background-size: cover;
   background-position: center;
   object-fit: cover;
+}
+
+img, video {
+  max-width: 100%;
 }
 
 @keyframes rainbow {
